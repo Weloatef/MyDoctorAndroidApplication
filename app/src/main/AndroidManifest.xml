@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TEST"
+        tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name=".getData"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="Administrator Page"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".medsManagerMain"
+            android:exported="false"
+            android:label="Medication Tracker and Reminder" />
+        <activity
+            android:name=".finishedRegActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LastActivity"
+            android:exported="false"
+            android:label="DIAGNOSES" />
+        <activity
+            android:name=".choosing"
+            android:exported="false" />
+        <activity
+            android:name=".infoScreen2"
+            android:exported="false"
+            android:label="PATIENT REGISTRATION DETAILS"
+            android:parentActivityName=".infoScreen1" />
+        <activity
+            android:name=".infoScreen1"
+            android:exported="false"
+            android:label="PATIENT REGISTRATION DETAILS"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:label="Choose your symptoms"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <receiver android:name=".AlarmReciever" />
+    </application>
+
+</manifest>
